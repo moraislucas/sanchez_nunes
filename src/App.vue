@@ -76,29 +76,37 @@ img {
   margin-bottom: 20px;
 }
 label {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #23292e;
+  display: block;
 }
 
 input,
-textarea {
-  border-radius: 4px;
-  border: 1px solid white;
+textarea,
+select {
+  border-radius: 5px;
+  border: 1px solid #e8e8e8;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+  height: 55px;
   transition: all 0.3s;
-  font-size: 1rem;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 15px;
   width: 100%;
+  resize: none;
+  background: transparent;
 }
 
 input:hover,
 input:focus,
 textarea:hover,
-textarea:focus {
+textarea:focus,
+select:hover,
+select:focus {
   outline: none;
-  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
-  border-color: #87f;
+  border-color: #23292e;
 }
 
 .v-enter,

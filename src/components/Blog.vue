@@ -66,7 +66,7 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
-  .log {
+  .blog {
     padding: 70px 20px;
   }
   .posts {

@@ -9,6 +9,8 @@
     <Servicos />
 
     <Blog />
+
+    <FaleConosco />
   </div>
 </template>
 
@@ -18,6 +20,7 @@ import Main from "@/components/Main.vue";
 import QuemSomos from "../components/Quem-somos.vue";
 import Servicos from "../components/Servicos.vue";
 import Blog from "../components/Blog.vue";
+import FaleConosco from "../components/FaleConosco.vue";
 
 export default {
   name: "Home",
@@ -27,6 +30,7 @@ export default {
     QuemSomos,
     Servicos,
     Blog,
+    FaleConosco,
   },
 
   created() {
