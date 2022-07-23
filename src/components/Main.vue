@@ -1,7 +1,7 @@
 <template>
   <section class="container main">
     <div>
-      <span>SEJAM BEM-VINDO (A)</span>
+      <span class="identificador">SEJAM BEM-VINDO (A)</span>
       <h1>Do ínicio ao fim, sempre ajudando nossos clientes.</h1>
       <h2>Sanchez & Nunes Advogados Associados</h2>
       <button class="btn">Entrar em contato conosco</button>
@@ -44,13 +44,6 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-span {
-  color: #a7a5a5;
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 20px;
-}
 h1 {
   color: #fff;
   font-size: 55px;
@@ -66,6 +59,19 @@ h2 {
 }
 .img-main {
   margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 20px;
+    display: block;
+  }
+  h1 {
+    /* font-size: ; */
+    line-height: auto;
+  }
+  .img-main {
+    display: none;
+  }
 }
 .social-media {
   margin-top: 40px;

@@ -63,10 +63,17 @@ img {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: .3s;
+  transition: 0.3s;
 }
-.btn:hover{
+.btn:hover {
   background: #3550d6;
+}
+.identificador {
+  color: #a7a5a5;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
 }
 label {
   margin-bottom: 5px;
