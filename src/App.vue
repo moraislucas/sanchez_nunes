@@ -1,32 +1,100 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <main id="main">
+      <transition mode="out-in">
+        <router-view />
+      </transition>
+    </main>
   </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+ 
+};
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #1a2025;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-#nav {
-  padding: 30px;
+#app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#main {
+  flex: 1;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+  border-color: #87f;
+}
+
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter {
+  transform: translate3d(0, -20px, 0);
+}
+
+.v-leave-to {
+  transform: translate3d(0, 20px, 0);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
 }
 </style>
