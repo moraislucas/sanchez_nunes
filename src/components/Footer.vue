@@ -52,6 +52,23 @@ export default {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 70px 20px;
+  }
+  .top-footer,
+  .bottom-footer {
+    display: block;
+  }
+  .top-footer .item-social {
+    margin-top: 30px;
+  }
+  .bottom-footer a {
+    margin-top: 30px;
+    width: auto;
+    display: inline-block;
+  }
+}
 .top-footer {
   padding-bottom: 60px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
