@@ -66,6 +66,9 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
   .blog {
     padding: 70px 20px;
   }

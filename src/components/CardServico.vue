@@ -66,4 +66,9 @@ h2 {
   color: #fff;
   font-weight: 600;
 }
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 16px;
+  }
+}
 </style>

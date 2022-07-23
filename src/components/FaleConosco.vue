@@ -110,6 +110,24 @@ h1,
   font-size: 36px;
 }
 @media screen and (max-width: 768px) {
+  h1,
+  .form h3 {
+    font-size: 32px;
+  }
+  .item-contato .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .item-contato .icon img {
+    width: 20px;
+    height: 20px;
+  }
+  .item-contato span {
+    font-size: 13px;
+  }
+  .item-contato p {
+    font-size: 14px;
+  }
   .fale-conosco {
     padding: 70px 20px;
   }

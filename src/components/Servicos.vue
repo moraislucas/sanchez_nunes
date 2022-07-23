@@ -81,6 +81,9 @@ h1 {
   gap: 30px;
 }
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
   .nossos-servicos {
     padding: 70px 20px;
   }

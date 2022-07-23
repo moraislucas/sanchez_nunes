@@ -69,15 +69,7 @@ h1 {
   font-weight: 600;
   margin: 10px 0 30px 0;
 }
-@media screen and (max-width: 768px) {
-  .quem-somos {
-    display: block;
-    padding: 50px 20px;
-  }
-  .img-about {
-    display: none;
-  }
-}
+
 p {
   font-size: 18px;
   color: #a7a5a5;
@@ -104,5 +96,20 @@ p + p {
 .advs span:hover {
   background: #149365;
   color: #fff;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .quem-somos {
+    display: block;
+    padding: 50px 20px;
+  }
+  .img-about {
+    display: none;
+  }
 }
 </style>

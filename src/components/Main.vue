@@ -77,8 +77,8 @@ h2 {
     display: block;
   }
   h1 {
-    /* font-size: ; */
-    line-height: auto;
+    font-size: 40px;
+    line-height: 1.2;
   }
   .img-main {
     display: none;
