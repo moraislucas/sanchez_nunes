@@ -7,6 +7,8 @@
     <QuemSomos />
 
     <Servicos />
+
+    <Blog />
   </div>
 </template>
 
@@ -15,6 +17,7 @@ import BaseMenu from "@/components/BaseMenu.vue";
 import Main from "@/components/Main.vue";
 import QuemSomos from "../components/Quem-somos.vue";
 import Servicos from "../components/Servicos.vue";
+import Blog from "../components/Blog.vue";
 
 export default {
   name: "Home",
@@ -23,6 +26,7 @@ export default {
     Main,
     QuemSomos,
     Servicos,
+    Blog,
   },
 
   created() {
