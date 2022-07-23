@@ -11,7 +11,6 @@
 <script>
 export default {
   name: "App",
- 
 };
 </script>
 
@@ -53,7 +52,22 @@ img {
 #main {
   flex: 1;
 }
-
+.btn {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  background: #3d5bf6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 20px 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s;
+}
+.btn:hover{
+  background: #3550d6;
+}
 label {
   margin-bottom: 5px;
 }
