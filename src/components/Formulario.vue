@@ -62,7 +62,7 @@ export default {
         },
         {
           text: "Direito Previdenciário",
-          value: "direito-civil",
+          value: "direito-previdenciario",
         },
         {
           text: "Direito do Consumidor",
