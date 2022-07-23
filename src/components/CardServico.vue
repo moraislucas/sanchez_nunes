@@ -30,6 +30,13 @@ export default {
   padding: 40px 30px;
   background: #23292e;
   border-radius: 5px;
+  transition: 0.3s;
+  border: 1px solid #23292e;
+}
+.card:hover {
+  transform: scale(1.05);
+  background: #1a2025;
+  border: 1px solid #23292e;
 }
 .top-card {
   display: flex;

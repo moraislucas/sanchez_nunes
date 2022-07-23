@@ -1,11 +1,13 @@
 <template>
   <section class="container main">
     <div>
-      <span class="identificador">SEJAM BEM-VINDO (A)</span>
-      <h1>Do ínicio ao fim, sempre ajudando nossos clientes.</h1>
-      <h2>Sanchez & Nunes Advogados Associados</h2>
+      <span class="identificador" data-anima="bottom">SEJAM BEM-VINDO (A)</span>
+      <h1 data-anima="top">
+        Do ínicio ao fim, sempre ajudando nossos clientes.
+      </h1>
+      <h2 data-anima="bottom">Sanchez & Nunes Advogados Associados</h2>
       <button class="btn">Entrar em contato conosco</button>
-      <div class="social-media">
+      <div class="social-media" data-anima="left">
         <a href="#"
           ><img
             src="@/assets/icons/whatsapp.svg"
@@ -23,7 +25,7 @@
         /></a>
       </div>
     </div>
-    <div class="img-main">
+    <div class="img-main" data-anima="right">
       <img
         src="@/assets/img/imagem-1.png"
         alt="Sanchez & Nunes Advogados Associados"
@@ -59,6 +61,15 @@ h2 {
 }
 .img-main {
   margin-left: auto;
+  animation: anima 3s infinite alternate;
+}
+@keyframes anima {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 @media screen and (max-width: 768px) {
   .main {

@@ -1,5 +1,5 @@
 <template>
-  <div class="geral">
+  <div class="geral" data-anima="bottom">
     <section class="container quem-somos">
       <div class="infos-about">
         <h2 class="identificador">QUEM SOMOS</h2>
@@ -18,8 +18,8 @@
           </p>
         </div>
         <div class="advs">
-          <span>André</span>
-          <span>Cicero</span>
+          <span>Dr. André</span>
+          <span>Dr. Cicero</span>
         </div>
       </div>
       <div class="img-about">
@@ -50,6 +50,16 @@ export default {
 }
 .img-about {
   margin-left: auto;
+  animation: anima 3s infinite alternate;
+}
+
+@keyframes anima {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 h1 {
@@ -89,5 +99,10 @@ p + p {
   display: block;
   border-radius: 5px;
   padding: 10px 20px;
+  transition: 0.3s;
+}
+.advs span:hover {
+  background: #149365;
+  color: #fff;
 }
 </style>

@@ -98,5 +98,9 @@ h1 {
   margin-top: 25px;
   background: #fff;
   color: #333;
+  transition: 0.3s;
+}
+.call-to-action .btn:hover {
+  background: #ccc;
 }
 </style>

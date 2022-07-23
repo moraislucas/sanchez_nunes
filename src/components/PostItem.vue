@@ -27,6 +27,11 @@ export default {
   border-radius: 5px;
   min-height: 200px;
   position: relative;
+  transition: 0.3s;
+}
+.post:hover {
+  background: #f7f7f7;
+  transform: scale(1.05);
 }
 @media screen and (max-width: 768px) {
   .post {

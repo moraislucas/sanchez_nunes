@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header >
     <div class="container menu">
-      <router-link to="/">
+      <router-link to="/" data-anima="left">
         <img
           src="@/assets/logo.svg"
           alt="Logotipo Sanchez e Nunes Advocacia"
@@ -13,7 +13,7 @@
           v-if="isMobile"
         />
       </router-link>
-      <nav>
+      <nav data-anima="right">
         <ul class="menu-items">
           <li><a href="#quem-somos">Quem somos</a></li>
           <li><a href="#servicos">Serviços</a></li>

@@ -37,6 +37,59 @@ img {
   max-width: 100%;
   display: block;
 }
+
+[data-anima="top"] {
+  animation: showTop 0.5s forwards;
+}
+@keyframes showTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+[data-anima="bottom"] {
+  animation: showBottom 0.5s forwards;
+}
+@keyframes showBottom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+[data-anima="left"] {
+  animation: showLeft 0.5s forwards;
+}
+@keyframes showLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+[data-anima="right"] {
+  animation: showRight 0.5s forwards;
+}
+@keyframes showRight {
+  from {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 .container {
   max-width: 1150px;
   margin: 0 auto;
@@ -63,10 +116,11 @@ img {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s !important;
 }
 .btn:hover {
   background: #3550d6;
+  transform: scale(1.05) !important;
 }
 .identificador {
   color: #a7a5a5;
