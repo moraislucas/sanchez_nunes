@@ -1,5 +1,5 @@
 <template>
-  <header >
+  <header>
     <div class="container menu">
       <router-link to="/" data-anima="left">
         <img
@@ -15,10 +15,12 @@
       </router-link>
       <nav data-anima="right">
         <ul class="menu-items">
-          <li><a href="#quem-somos">Quem somos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#fale-conosco">Fale Conosco</a></li>
+          <li><a href="#">Produtos Energy</a></li>
+          <li><a href="#">Conta digital PJ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li><button class="btn">Abra sua conta digital</button></li>
         </ul>
       </nav>
     </div>
@@ -74,10 +76,18 @@ header {
   color: #fff;
   font-weight: 600;
   transition: 0.3;
-  font-size: 1rem;
+  font-size: 15px;
 }
 .menu-items li a:hover {
   color: #c7c7c7;
+}
+.btn {
+  background: transparent;
+  color: #fff;
+}
+.btn:hover {
+  background: #fff;
+  color: #00b453;
 }
 
 /* responsivo */

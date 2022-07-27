@@ -19,14 +19,16 @@ export default {
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #33303e;
 }
 body {
-  background: #1a2025;
+  background: #000;
 }
+
 ul {
   list-style: none;
 }
@@ -107,19 +109,19 @@ img {
 }
 .btn {
   display: block;
-  font-family: "Montserrat", sans-serif;
-  background: #3d5bf6;
-  color: #fff;
+  font-family: "Nunito", sans-serif;
+  background: #fff;
+  border: 1px solid #fff !important;
+  color: #00b453;
   font-weight: 600;
-  font-size: 15px;
-  padding: 20px 35px;
+  font-size: 14px;
+  padding: 10px 25px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 100px;
   transition: 0.3s !important;
 }
 .btn:hover {
-  background: #3550d6;
   transform: scale(1.05) !important;
 }
 .identificador {
@@ -146,7 +148,7 @@ select {
   height: 55px;
   transition: all 0.3s;
   font-size: 15px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-bottom: 15px;
   width: 100%;
   resize: none;
