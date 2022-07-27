@@ -14,14 +14,29 @@
         />
       </router-link>
       <nav data-anima="right">
-        <button>X</button>
+        <button class="btn btn-menu" @click="openMenu = !openMenu">MENU</button>
         <ul class="menu-items">
           <li><a href="#">Produtos Energy</a></li>
           <li><a href="#">Conta digital PJ</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Quem somos</a></li>
           <li><a href="#">Ajuda</a></li>
-          <li><button class="btn">Abra sua conta digital</button></li>
+          <li><button class="btn btn-conta">Abra sua conta digital</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="menu-mobile" data-anima="top" :class="{ ativo: openMenu }">
+      <nav class="">
+        <ul>
+          <li><a href="#">Produtos Energy</a></li>
+          <li><a href="#">Conta digital PJ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Quem somos</a></li>
+          <li><a href="#">Ajuda</a></li>
+          <li>
+            <button class="btn btn-conta">Abra sua conta digital</button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -33,6 +48,7 @@ export default {
   name: "BaseMenu",
   data() {
     return {
+      openMenu: false,
       client: {
         width: 0,
       },
@@ -63,6 +79,9 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   background: #000;
 }
+.btn-menu {
+  display: none !important;
+}
 .menu {
   padding: 25px 0;
   display: flex;
@@ -91,37 +110,44 @@ header {
   background: #fff;
   color: #00b453;
 }
-
-/* responsivo */
-@media screen and (max-width: 1300px) {
+.menu-mobile {
+  width: 100%;
+  height: 27vh;
+  transition: 0.3s;
+  padding: 0 20px;
+  display: none;
 }
+
 @media screen and (max-width: 768px) {
+  .btn-menu {
+    display: block !important;
+  }
   .menu {
     padding: 20px;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 25px;
-    display: block;
+    /* display: block; */
   }
   .menu-items {
-    gap: 25px;
-    display: none;
-    margin-top: 30px;
-    width: 100%;
-    height: 30vh;
-    transition: 0.3s;
+    display: none !important;
   }
-  .menu-items.ativo {
+
+  .menu-mobile.ativo {
     display: block;
   }
-  .menu-items li a {
+  .menu-mobile li a {
     font-size: 16px;
     padding: 10px;
     padding-left: 0;
+    color: #fff;
   }
-  .menu-items li + li {
+  .menu-mobile li + li {
     margin-top: 20px;
   }
   .btn {
+    padding: 10px 15px;
+  }
+  .btn-conta {
     display: none;
   }
 }
