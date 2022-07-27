@@ -4,7 +4,7 @@
 
     <Main />
 
-    <QuemSomos />
+    <Detalhes />
 
     <Servicos />
 
@@ -19,7 +19,7 @@
 <script>
 import BaseMenu from "@/components/BaseMenu.vue";
 import Main from "@/components/Main.vue";
-import QuemSomos from "../components/Quem-somos.vue";
+import Detalhes from "../components/Detalhes.vue";
 import Servicos from "../components/Servicos.vue";
 import Blog from "../components/Blog.vue";
 import FaleConosco from "../components/FaleConosco.vue";
@@ -30,7 +30,7 @@ export default {
   components: {
     BaseMenu,
     Main,
-    QuemSomos,
+    Detalhes,
     Servicos,
     Blog,
     FaleConosco,
