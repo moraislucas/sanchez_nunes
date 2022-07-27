@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- reset commit -->
     <main id="main">
       <transition mode="out-in">
         <router-view />
