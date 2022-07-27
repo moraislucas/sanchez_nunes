@@ -7,7 +7,7 @@
         <div class="contatos">
           <a href="#" class="item-contato">
             <div class="icon">
-              <img src="@/assets/icons/duvida.svg" alt="Dúvidas" />
+              <!-- <img src="@/assets/icons/duvida.svg" alt="Dúvidas" /> -->
             </div>
             <div>
               <span>Dúvidas ? Fale conosco</span>
@@ -16,7 +16,7 @@
           </a>
           <a href="#" class="item-contato">
             <div class="icon">
-              <img src="@/assets/icons/whats.svg" alt="WhatsApp" />
+              <!-- <img src="@/assets/icons/whats.svg" alt="WhatsApp" /> -->
             </div>
             <div>
               <span>WhatsApp</span>
@@ -25,10 +25,10 @@
           </a>
           <a href="#" class="item-contato">
             <div class="icon">
-              <img
+              <!-- <img
                 src="@/assets/icons/endereco.svg"
                 alt="Endereço/Localização"
-              />
+              /> -->
             </div>
             <p>Rua Logo Ali nº 45, Pinheiros, São Paulo - SP</p>
           </a>

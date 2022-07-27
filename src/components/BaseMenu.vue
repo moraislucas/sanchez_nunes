@@ -4,12 +4,12 @@
       <router-link to="/" data-anima="left">
         <img
           src="@/assets/logo.svg"
-          alt="Logotipo Sanchez e Nunes Advocacia"
+          alt="Logotipo Banco Energy"
           v-if="!isMobile"
         />
         <img
           src="@/assets/logo-mobile.svg"
-          alt="Logotipo Sanchez e Nunes Advocacia"
+          alt="Logotipo Banco Energy"
           v-if="isMobile"
         />
       </router-link>
@@ -60,6 +60,7 @@ export default {
 <style scoped>
 header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: #000;
 }
 .menu {
   padding: 25px 0;

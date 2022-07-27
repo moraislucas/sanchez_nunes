@@ -22,12 +22,12 @@
           <span>Dr. Cicero</span>
         </div>
       </div>
-      <div class="img-about">
+      <!-- <div class="img-about">
         <img
           src="@/assets/img/imagem-2.png"
           alt="Sanchez & Nunes Advogados Associados"
         />
-      </div>
+      </div> -->
     </section>
   </div>
 </template>

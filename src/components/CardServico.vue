@@ -2,10 +2,10 @@
   <div class="card">
     <div class="top-card">
       <div class="icon">
-        <img
+        <!-- <img
           :src="require(`@/assets/icons/${servico.icon}.svg`)"
           :alt="servico.icon"
-        />
+        /> -->
       </div>
       <span class="type">{{ servico.type }}</span>
     </div>

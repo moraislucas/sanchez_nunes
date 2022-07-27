@@ -1,4 +1,4 @@
-# sanchez_e_nunez
+# energybank
 
 ## Project setup
 ```

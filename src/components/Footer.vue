@@ -1,10 +1,10 @@
 <template>
   <footer class="container footer">
     <div class="top-footer">
-      <img src="@/assets/logo-footer.svg" alt="Logotipo Sanchez e Nunes" />
+      <!-- <img src="@/assets/logo-footer.svg" alt="Logotipo Sanchez e Nunes" /> -->
       <div class="item-social">
         <p>Acompanhe nas redes</p>
-        <div class="redes-sociais">
+        <!-- <div class="redes-sociais">
           <a href="#">
             <img src="@/assets/icons/youtube.svg" alt="Youtube" />
           </a>
@@ -20,7 +20,7 @@
           <a href="#">
             <img src="@/assets/icons/twitter.svg" alt="twitter" />
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="bottom-footer">

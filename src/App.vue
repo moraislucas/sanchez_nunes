@@ -25,9 +25,6 @@ export default {
   box-sizing: border-box;
   color: #33303e;
 }
-body {
-  background: #000;
-}
 
 ul {
   list-style: none;
@@ -124,13 +121,7 @@ img {
 .btn:hover {
   transform: scale(1.05) !important;
 }
-.identificador {
-  color: #a7a5a5;
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 20px;
-}
+
 label {
   margin-bottom: 8px;
   font-weight: 600;
