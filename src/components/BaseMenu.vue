@@ -14,6 +14,7 @@
         />
       </router-link>
       <nav data-anima="right">
+        <button>X</button>
         <ul class="menu-items">
           <li><a href="#">Produtos Energy</a></li>
           <li><a href="#">Conta digital PJ</a></li>
@@ -99,12 +100,29 @@ header {
     padding: 20px;
     justify-content: flex-start;
     gap: 25px;
+    display: block;
   }
   .menu-items {
     gap: 25px;
+    display: none;
+    margin-top: 30px;
+    width: 100%;
+    height: 30vh;
+    transition: 0.3s;
+  }
+  .menu-items.ativo {
+    display: block;
   }
   .menu-items li a {
-    font-size: 0.8rem;
+    font-size: 16px;
+    padding: 10px;
+    padding-left: 0;
+  }
+  .menu-items li + li {
+    margin-top: 20px;
+  }
+  .btn {
+    display: none;
   }
 }
 </style>

@@ -2,7 +2,7 @@
   <div class="geral" data-anima="bottom">
     <section class="container detalhes">
       <div>
-        <img src="@/assets/img/mobile-app.svg" alt="" />
+        <img src="@/assets/img/mobile-app.svg" alt="" class="mobile-img" />
         <h5>Baixe nosso app</h5>
         <p>
           Que tal abrir uma conta digital para<br />
@@ -111,10 +111,13 @@ p {
   h1 {
     font-size: 32px;
   }
-
   .detalhes {
-    display: block;
-    padding: 50px 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+  }
+  .mobile-img {
+    display: none;
   }
 }
 </style>

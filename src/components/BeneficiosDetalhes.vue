@@ -123,4 +123,15 @@ export default {
 .produtos:hover span {
   margin: 0;
 }
+@media screen and (max-width: 768px) {
+  .item-beneficio h3 {
+    font-size: 20px;
+  }
+  .item-beneficio:hover .arrow {
+    display: none;
+  }
+  .item-beneficio p {
+    font-size: 13px;
+  }
+}
 </style>

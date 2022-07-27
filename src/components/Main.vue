@@ -102,19 +102,6 @@ h2 {
     transform: translate3d(0, 0, 0);
   }
 }
-@media screen and (max-width: 768px) {
-  .main {
-    padding: 20px;
-    display: block;
-  }
-  h1 {
-    font-size: 40px;
-    line-height: 1.2;
-  }
-  .img-main {
-    display: none;
-  }
-}
 .beneficios {
   margin-top: 60px;
   display: flex;
@@ -135,5 +122,36 @@ h2 {
 .item-beneficio p {
   color: #fff;
   font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 20px;
+    display: block;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .btn {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .identificador {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .img-main {
+    display: none;
+  }
+  .beneficios {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .item-beneficio p {
+    font-size: 16px;
+  }
+  .item-beneficio + .item-beneficio {
+    margin-top: 20px;
+  }
 }
 </style>

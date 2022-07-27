@@ -88,4 +88,28 @@ h3 {
   background: #ffc800;
   border: none !important;
 }
+
+@media screen and (max-width: 768px) {
+  h2,
+  h3 {
+    font-size: 32px;
+  }
+  .img-card {
+    display: none;
+  }
+  .energy-pj {
+    grid-template-columns: 1fr;
+  }
+  .energy-pj h4 {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .energy-pj p {
+    margin-bottom: 15px;
+  }
+  .energy-pj p,
+  .btn {
+    font-size: 14px;
+  }
+}
 </style>
