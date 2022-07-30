@@ -119,6 +119,10 @@ img {
   border-radius: 5px;
   transition: 0.3s !important;
 }
+.btn:disabled {
+  pointer-events: none;
+  background: #23292e;
+}
 .btn:hover {
   background: #3550d6;
   transform: scale(1.05) !important;
@@ -152,6 +156,13 @@ select {
   width: 100%;
   resize: none;
   background: transparent;
+}
+input:disabled,
+textarea:disabled,
+select:disabled {
+  pointer-events: none;
+  background: #23292e;
+  border: none;
 }
 
 input:hover,
