@@ -13,6 +13,7 @@
           :card="card"
           @visualizar="visualizarItem"
           @editar="editarItem"
+          @getCards="getCards"
         />
       </div>
     </div>
@@ -47,11 +48,14 @@ export default {
       show_list: true,
       criar: false,
       visualizar: {},
-      editar: false,
+      editar: {},
     };
   },
   components: { CardItem, VisualizarArtigo, CriarArtigo },
   methods: {
+    getCards() {
+      this.$emit("getCards");
+    },
     criarArtigo() {
       this.show_list = false;
       this.criar = true;
@@ -65,6 +69,7 @@ export default {
       this.criar = true;
       this.editar = data;
     },
+
     voltar() {
       this.show_list = true;
       this.visualizar = {};

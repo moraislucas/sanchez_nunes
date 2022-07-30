@@ -9,7 +9,7 @@
       <a href="#" @click.prevent="visualizar">Visualizar</a>
       <a href="#">Editar</a>
       <a href="#">{{ card.active ? "Desativar" : "Ativar" }}</a>
-      <a href="#" class="excluir">Excluir</a>
+      <a href="#" class="excluir" @click.prevent="excluir">Excluir</a>
     </div>
     <!-- <p>Conteudo do Artigo:</p>
     <div v-html="card.about" class="artigo"></div> -->
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { api } from "@/services.js";
 export default {
   name: "Card",
   props: {
@@ -28,6 +29,21 @@ export default {
   methods: {
     visualizar() {
       this.$emit("visualizar", this.card);
+    },
+    excluir() {
+      const retorno = confirm(
+        `Deseja continuar excluir esse Artigo? [#${this.card.id} - ${this.card.title}]`
+      );
+      if (retorno) {
+        api
+          .delete(`card/${this.card.id}`)
+          .then(() => {
+            this.$emit("getCards");
+          })
+          .catch(() => {
+            alert("Erro ao tentar excluir esse artigo");
+          });
+      }
     },
   },
 };

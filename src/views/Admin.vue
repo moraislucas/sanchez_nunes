@@ -4,7 +4,11 @@
       <!-- Form Login -->
       <Login @success="getCards" />
     </div>
-    <ListaCards :cards="cards" v-if="!show_login || cards.length" />
+    <ListaCards
+      :cards="cards"
+      v-if="!show_login || cards.length"
+      @getCards="getCards"
+    />
   </section>
 </template>
 
@@ -23,11 +27,16 @@ export default {
   },
   methods: {
     getCards() {
+      this.cards = [];
       this.show_login = false;
-      api.get("card").then((resp) => {
-        this.cards = resp.data;
-        console.log(this.cards);
-      });
+      api
+        .get("card")
+        .then((resp) => {
+          this.cards = resp.data;
+        })
+        .catch(() => {
+          alert("Erro ao buscar os artigos");
+        });
     },
   },
 };
