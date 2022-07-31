@@ -62,6 +62,7 @@ export default {
       this.$emit("getCards");
     },
     criarArtigo() {
+      this.voltar();
       this.show_list = false;
       this.criar = true;
     },

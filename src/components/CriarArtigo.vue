@@ -15,27 +15,8 @@
         :disabled="loading"
       />
       <label for="conteudo">Conteúdo</label>
-      <input
-        type="text"
-        id="conteudo"
-        placeholder="Conteúdo"
-        required
-        v-model="dados.About"
-        :disabled="loading"
-      />
 
-      <div v-if="dados.Id">
-        <input
-          type="checkbox"
-          id="active"
-          name="active"
-          v-model="dados.Active"
-          :disabled="loading"
-        />
-        <label for="active">
-          {{ dados.Active ? "Artigo ativado" : "Artigo desativado" }}</label
-        ><br />
-      </div>
+      <vue-editor v-model="html" :html="html"></vue-editor>
 
       <button class="btn" :disabled="loading">Salvar</button>
     </form>
@@ -51,16 +32,10 @@
         :disabled="loading"
       />
       <label for="conteudo">Conteúdo</label>
-      <input
-        type="text"
-        id="conteudo"
-        placeholder="Conteúdo"
-        required
-        v-model="editar.About"
-        :disabled="loading"
-      />
 
-      <div>
+      <vue-editor v-model="html" :html="html"></vue-editor>
+
+      <div class="check">
         <input
           type="checkbox"
           id="active"
@@ -80,8 +55,12 @@
 
 <script>
 import { api } from "@/services.js";
+import { VueEditor } from "vue2-editor";
 export default {
   name: "CriarArtigo",
+  components: {
+    VueEditor,
+  },
   props: {
     editar: {
       type: Object,
@@ -94,6 +73,7 @@ export default {
       text_btn: "Salvar",
       show_error: false,
       loading: false,
+      html: "",
       dados: {
         Title: "",
         About: "",
@@ -106,6 +86,8 @@ export default {
       this.loading = true;
       this.show_error = false;
       this.text_btn = "Carregando...";
+      this.editar.About = this.html;
+
       api
         .put(`card/${this.editar.Id}`, { ...this.editar, Id: this.editar.Id })
         .then(() => {
@@ -124,6 +106,8 @@ export default {
       this.loading = true;
       this.show_error = false;
       this.text_btn = "Carregando...";
+      this.dados.About = this.html;
+
       api
         .post("card", this.dados)
         .then(() => {
@@ -139,6 +123,9 @@ export default {
           this.loading = false;
         });
     },
+  },
+  mounted() {
+    this.html = this.editar.About;
   },
 };
 </script>
@@ -183,5 +170,8 @@ input:focus {
   padding: 10px 15px;
   border-radius: 5px;
   text-align: center;
+}
+.check {
+  margin-top: 15px;
 }
 </style>
