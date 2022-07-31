@@ -7,12 +7,12 @@
     </h2>
     <div class="acoes">
       <a href="#" @click.prevent="visualizar">Visualizar</a>
-      <a href="#">Editar</a>
-      <a href="#">{{ card.active ? "Desativar" : "Ativar" }}</a>
+      <a href="#" @click.prevent="editar">Editar</a>
+      <a href="#" @click.prevent="changeStatus">{{
+        card.active ? "Desativar" : "Ativar"
+      }}</a>
       <a href="#" class="excluir" @click.prevent="excluir">Excluir</a>
     </div>
-    <!-- <p>Conteudo do Artigo:</p>
-    <div v-html="card.about" class="artigo"></div> -->
   </div>
 </template>
 
@@ -27,6 +27,27 @@ export default {
     },
   },
   methods: {
+    changeStatus() {
+      const status = this.card.active ? false : true;
+      const data = {
+        About: this.card.about,
+        Id: this.card.id,
+        Title: this.card.title,
+        Active: status,
+      };
+
+      api
+        .put(`card/${this.card.id}`, data)
+        .then(() => {
+          this.$emit("getCards");
+        })
+        .catch(() => {
+          alert("Erro ao tentar modificar esse artigo");
+        });
+    },
+    editar() {
+      this.$emit("editar", this.card);
+    },
     visualizar() {
       this.$emit("visualizar", this.card);
     },

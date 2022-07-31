@@ -127,6 +127,12 @@ img {
   background: #3550d6;
   transform: scale(1.05) !important;
 }
+@media screen and (max-width: 768px) {
+  .btn:hover {
+    background: #3550d6;
+    transform: scale(1) !important;
+  }
+}
 .identificador {
   color: #a7a5a5;
   font-size: 14px;

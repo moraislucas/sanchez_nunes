@@ -4,9 +4,9 @@
       #{{ visualizar.id }} - {{ visualizar.title }}
       <div class="left-view">
         <div class="acoes">
-          <a href="#">Editar</a>
-          <a href="#">{{ visualizar.active ? "Desativar" : "Ativar" }}</a>
-          <a href="#" class="excluir">Excluir</a>
+          <a href="#" @click.prevent="editar">Editar</a>
+          <a href="#" @click.prevent="changeStatus">{{ visualizar.active ? "Desativar" : "Ativar" }}</a>
+          <a href="#" class="excluir" @click.prevent="excluir">Excluir</a>
         </div>
         <span class="ativo" v-if="visualizar.active">Ativado</span>
         <span class="desativado" v-else>Desativado</span>
@@ -18,12 +18,52 @@
 </template>
 
 <script>
+import { api } from "@/services.js";
+
 export default {
   name: "VisualizarArtigo",
   props: {
     visualizar: {
       type: Object,
       default: () => {},
+    },
+  },
+  methods: {
+    changeStatus() {
+      const status = this.visualizar.active ? false : true;
+      const data = {
+        About: this.visualizar.about,
+        Id: this.visualizar.id,
+        Title: this.visualizar.title,
+        Active: status,
+      };
+
+      api
+        .put(`card/${this.visualizar.id}`, data)
+        .then(() => {
+          this.$emit("getCards");
+        })
+        .catch(() => {
+          alert("Erro ao tentar modificar esse artigo");
+        });
+    },
+    editar() {
+      this.$emit("editar", this.visualizar);
+    },
+    excluir() {
+      const retorno = confirm(
+        `Deseja continuar excluir esse Artigo? [#${this.visualizar.id} - ${this.visualizar.title}]`
+      );
+      if (retorno) {
+        api
+          .delete(`card/${this.visualizar.id}`)
+          .then(() => {
+            this.$emit("getCards");
+          })
+          .catch(() => {
+            alert("Erro ao tentar excluir esse artigo");
+          });
+      }
     },
   },
 };
@@ -83,5 +123,13 @@ export default {
 
 .acoes a.excluir {
   color: #ff0022;
+}
+@media screen and (max-width: 768px) {
+  .visualizar h2 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+  }
 }
 </style>

@@ -22,10 +22,14 @@
         🠔 Voltar para listagem
       </a>
       <div v-if="Object.keys(visualizar).length">
-        <VisualizarArtigo :visualizar="visualizar" />
+        <VisualizarArtigo
+          :visualizar="visualizar"
+          @editar="editarItem"
+          @getCards="getCards"
+        />
       </div>
       <div v-if="criar">
-        <CriarArtigo :editar="editar" />
+        <CriarArtigo :editar="editar" @success="getCards" />
       </div>
     </div>
   </div>
@@ -54,6 +58,7 @@ export default {
   components: { CardItem, VisualizarArtigo, CriarArtigo },
   methods: {
     getCards() {
+      this.voltar();
       this.$emit("getCards");
     },
     criarArtigo() {
@@ -65,14 +70,22 @@ export default {
       this.visualizar = data;
     },
     editarItem(data) {
+      this.editar = {};
+      this.editar = {
+        Id: data.id,
+        Title: data.title,
+        About: data.about,
+        Active: data.active,
+      };
       this.show_list = false;
       this.criar = true;
-      this.editar = data;
+      this.visualizar = {};
     },
 
     voltar() {
       this.show_list = true;
       this.visualizar = {};
+      this.editar = {};
       this.criar = false;
     },
   },
@@ -99,6 +112,11 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .lista-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .voltar {
   display: inline-block;
