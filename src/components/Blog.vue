@@ -42,7 +42,7 @@ export default {
           if (this.tentativas < 3) {
             this.getBlog();
           }
-        })
+        });
     },
   },
   mounted() {
@@ -66,7 +66,7 @@ h1 {
 }
 .posts {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 

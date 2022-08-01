@@ -17,7 +17,7 @@
     <p>Resumo:</p>
     <div class="artigo">{{ visualizar.summary }}</div>
 
-    <p>Conteudo do Artigo:</p>
+    <p v-if="!read">Conteudo do Artigo:</p>
     <div v-html="visualizar.about" class="artigo"></div>
   </div>
 </template>
@@ -119,6 +119,7 @@ export default {
 .visualizar .artigo {
   color: #a7a5a5;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 .acoes {
   display: flex;
