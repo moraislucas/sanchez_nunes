@@ -1,7 +1,9 @@
 <template>
   <div class="visualizar" data-anima="bottom">
     <h2>
-      #{{ !read ? visualizar.id : "" }} - {{ visualizar.title }}
+      <div v-if="!read">#{{ visualizar.id }} - {{ visualizar.title }}</div>
+      <div v-else>{{ visualizar.title }}</div>
+
       <div class="left-view" v-if="!read">
         <div class="acoes">
           <a href="#" @click.prevent="editar">Editar</a>
