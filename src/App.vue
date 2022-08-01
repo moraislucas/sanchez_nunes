@@ -30,7 +30,7 @@ export default {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ececec;
+  background: #13171a;
   border-radius: 5px;
   height: 50px;
 }
