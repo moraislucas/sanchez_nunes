@@ -1,36 +1,53 @@
 <template>
   <footer class="container footer">
     <div class="top-footer">
-      <img src="@/assets/logo-footer.svg" alt="Logotipo Sanchez e Nunes" />
+      <img
+        src="@/assets/logo-footer.svg"
+        alt="Logotipo Sanchez e Nunes"
+        @click="topo"
+        class="logo"
+      />
       <div class="item-social">
         <p>Acompanhe nas redes</p>
         <div class="redes-sociais">
-          <a href="#">
+          <!-- <a href="#">
             <img src="@/assets/icons/youtube.svg" alt="Youtube" />
-          </a>
-          <a href="#">
+          </a> -->
+          <!-- <a href="#">
             <img src="@/assets/icons/linkedin.svg" alt="linkedin" />
-          </a>
-          <a href="#">
+          </a> -->
+          <a
+            target="_blank"
+            href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
+            ><img
+              src="@/assets/icons/whatsapp.svg"
+              alt="whatsapp Sanchez & Nunes Advogados Associados"
+          /></a>
+          <a href="https://www.facebook.com/sanchez.nunes.77" target="_blank">
             <img src="@/assets/icons/facebook.svg" alt="facebook" />
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com/sanchezenunesadvocacia/"
+            target="_blank"
+          >
             <img src="@/assets/icons/instagram.svg" alt="instagram" />
           </a>
-          <a href="#">
+          <!-- <a href="#">
             <img src="@/assets/icons/twitter.svg" alt="twitter" />
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
     <div class="bottom-footer">
       <p>
-        SANCHEZ E NUNEZ - ADVOGADOS ASSOCIADOS – Av Logo Ali, 253 - São Paulo -
-        SP, 0000-000
+        SANCHEZ E NUNEZ - ADVOGADOS ASSOCIADOS
+        <br />
+        Av. Brasil 1458, 1º Andar, Sala 04 - Rochdale - CEP 06220-050 -
+        Osasco/SP
       </p>
-      <a href="#">
+      <a href="mailto:sanchezenunes.adv@hotmail.com">
         <span>Atendimento:</span>
-        <p>faleconosco@sanchesnunes.com</p>
+        <p>sanchezenunes.adv@hotmail.com</p>
       </a>
     </div>
   </footer>
@@ -39,6 +56,14 @@
 <script>
 export default {
   name: "Footer",
+  methods: {
+    topo() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
 };
 </script>
 
@@ -78,6 +103,8 @@ export default {
 }
 .bottom-footer p {
   color: #fff;
+  font-size: 15px;
+  line-height: 1.6;
 }
 .bottom-footer a {
   background: rgba(255, 255, 255, 0.2);
@@ -114,5 +141,8 @@ export default {
   p {
     font-size: 14px;
   }
+}
+.logo {
+  cursor: pointer;
 }
 </style>

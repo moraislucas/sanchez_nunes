@@ -7,14 +7,19 @@
       </button>
     </div>
 
-    <div class="lista-grid" v-if="show_list">
-      <div v-for="card in cards" :key="card.id" class="card" data-anima="top">
-        <CardItem
-          :card="card"
-          @visualizar="visualizarItem"
-          @editar="editarItem"
-          @getCards="getCards"
-        />
+    <div v-if="show_list">
+      <div v-if="cards.length" class="lista-grid">
+        <div v-for="card in cards" :key="card.id" class="card" data-anima="top">
+          <CardItem
+            :card="card"
+            @visualizar="visualizarItem"
+            @editar="editarItem"
+            @getCards="getCards"
+          />
+        </div>
+      </div>
+      <div v-else>
+        <p class="nenhum">Nenhum artigo cadastrado</p>
       </div>
     </div>
     <div v-if="!show_list">
@@ -119,5 +124,14 @@ h1 {
   color: #fff;
   font-weight: 600;
   margin-bottom: 40px;
+}
+.nenhum {
+  color: #fff;
+  background: #23292e;
+  margin-bottom: 20px;
+  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
 }
 </style>

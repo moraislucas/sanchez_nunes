@@ -2,7 +2,7 @@
   <div>
     <p v-if="show_error" class="notify error" data-anima="top">
       Ocorreu um erro ao enviar os dados. <br />Entre em contato:
-      faleconosco@sanchesnunes.com
+      sanchezenunes.adv@hotmail.com
     </p>
     <p v-if="show_success" class="notify success" data-anima="top">
       Dados enviados corretamente. <br />Em breve entraremos em contato com você
@@ -117,9 +117,8 @@ export default {
 
       api
         .post("Email", this.dados)
-        .then((resp) => {
+        .then(() => {
           this.show_success = true;
-          console.log(resp);
         })
         .catch((erro) => {
           console.log(erro);

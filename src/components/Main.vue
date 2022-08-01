@@ -6,19 +6,23 @@
         Do ínicio ao fim, sempre ajudando nossos clientes.
       </h1>
       <h2 data-anima="bottom">Sanchez & Nunes Advogados Associados</h2>
-      <button class="btn">Entrar em contato conosco</button>
+      <a href="#fale-conosco" class="btn">Entrar em contato conosco</a>
       <div class="social-media" data-anima="left">
-        <a href="#"
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
           ><img
             src="@/assets/icons/whatsapp.svg"
             alt="whatsapp Sanchez & Nunes Advogados Associados"
         /></a>
-        <a href="#"
+        <a
+          href="https://www.instagram.com/sanchezenunesadvocacia/"
+          target="_blank"
           ><img
             src="@/assets/icons/instagram.svg"
             alt="instagram Sanchez & Nunes Advogados Associados"
         /></a>
-        <a href="#"
+        <a href="https://www.facebook.com/sanchez.nunes.77" target="_blank"
           ><img
             src="@/assets/icons/facebook.svg"
             alt="facebook Sanchez & Nunes Advogados Associados"

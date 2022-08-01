@@ -4,13 +4,13 @@
 
     <Main />
 
-    <QuemSomos />
+    <QuemSomos id="quem-somos" />
 
-    <Servicos />
+    <Servicos id="servicos" />
 
-    <Blog />
+    <Blog id="blog" />
 
-    <FaleConosco />
+    <FaleConosco id="fale-conosco" />
 
     <Footer />
   </div>

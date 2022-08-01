@@ -2,7 +2,7 @@
   <div class="visualizar" data-anima="bottom">
     <h2>
       #{{ visualizar.id }} - {{ visualizar.title }}
-      <div class="left-view">
+      <div class="left-view" v-if="!read">
         <div class="acoes">
           <a href="#" @click.prevent="editar">Editar</a>
           <a href="#" @click.prevent="changeStatus">{{
@@ -14,6 +14,9 @@
         <span class="desativado" v-else>Desativado</span>
       </div>
     </h2>
+    <p>Resumo:</p>
+    <div class="artigo">{{ visualizar.summary }}</div>
+
     <p>Conteudo do Artigo:</p>
     <div v-html="visualizar.about" class="artigo"></div>
   </div>
@@ -29,6 +32,10 @@ export default {
       type: Object,
       default: () => {},
     },
+    read: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     changeStatus() {
@@ -38,6 +45,7 @@ export default {
         id: this.visualizar.id,
         title: this.visualizar.title,
         active: status,
+        summary: this.visualizar.summary,
       };
 
       api
@@ -110,6 +118,7 @@ export default {
 }
 .visualizar .artigo {
   color: #a7a5a5;
+  margin-bottom: 20px;
 }
 .acoes {
   display: flex;

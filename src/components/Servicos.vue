@@ -14,7 +14,7 @@
     </div>
     <div class="call-to-action">
       <p>Vamos conversar sobre o seu problema, podemos ajudar</p>
-      <button class="btn">Entrar em contato conosco</button>
+      <a href="#fale-conosco" class="btn">Entrar em contato conosco</a>
     </div>
   </section>
 </template>

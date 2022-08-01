@@ -1,10 +1,10 @@
 <template>
-  <div class="post">
+  <div class="post" @click="openPost(post.id)">
     <!-- <img src="@/assets/img/imagem-1.png" alt="" /> -->
     <div class="info">
       <h2>{{ post.title }}</h2>
-      <p>{{ post.obs }}</p>
-      <a href="#">Saiba mais</a>
+      <p>{{ post.summary }}</p>
+      <span>Saiba mais</span>
     </div>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
       default: () => {},
     },
   },
+  methods: {
+    openPost(id) {
+      this.$router.push(`blog/${id}`);
+    },
+  },
 };
 </script>
 
@@ -28,6 +33,7 @@ export default {
   min-height: 200px;
   position: relative;
   transition: 0.3s;
+  cursor: pointer;
 }
 .post:hover {
   background: #f7f7f7;
@@ -54,11 +60,11 @@ export default {
   line-height: 22px;
   /* margin-bottom: 25px; */
 }
-.post a {
+.post span {
   font-weight: 600;
   font-size: 13px;
   color: #23292e;
-  position: absolute;
-  bottom: 30px;
+  margin-top: 20px;
+  display: inline-block;
 }
 </style>

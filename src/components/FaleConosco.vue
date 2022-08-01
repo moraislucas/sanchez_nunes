@@ -5,32 +5,48 @@
         <h2 class="identificador">FALE CONOSCO</h2>
         <h1>Entre em contato</h1>
         <div class="contatos">
-          <a href="#" class="item-contato">
+          <a
+            href="mailto:sanchezenunes.adv@hotmail.com"
+            class="item-contato"
+            target="_blank"
+          >
             <div class="icon">
               <img src="@/assets/icons/duvida.svg" alt="Dúvidas" />
             </div>
             <div>
               <span>Dúvidas ? Fale conosco</span>
-              <p>contato@contato.com</p>
+              <p>sanchezenunes.adv@hotmail.com</p>
             </div>
           </a>
-          <a href="#" class="item-contato">
+          <a
+            href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
+            class="item-contato"
+            target="_blank"
+          >
             <div class="icon">
               <img src="@/assets/icons/whats.svg" alt="WhatsApp" />
             </div>
             <div>
               <span>WhatsApp</span>
-              <p>(11) 2233-4455</p>
+              <p>(11) 2576-8639</p>
             </div>
           </a>
-          <a href="#" class="item-contato">
+
+          <a
+            href="https://goo.gl/maps/bVkpXvkPQqhuC8eX7"
+            class="item-contato"
+            target="_blank"
+          >
             <div class="icon">
               <img
                 src="@/assets/icons/endereco.svg"
                 alt="Endereço/Localização"
               />
             </div>
-            <p>Rua Logo Ali nº 45, Pinheiros, São Paulo - SP</p>
+            <p>
+              Av. Brasil 1458, 1º Andar, Sala 04 - Rochdale - CEP 06220-050 -
+              Osasco/SP
+            </p>
           </a>
         </div>
       </div>
@@ -98,8 +114,9 @@ h1,
 }
 .item-contato p {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 17px;
   color: #23292e;
+  line-height: 1.5;
 }
 .grid-contato {
   display: grid;

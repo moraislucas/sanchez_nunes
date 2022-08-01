@@ -1,5 +1,5 @@
 <template>
-  <section class="blog">
+  <section class="blog" v-if="posts.length">
     <div class="container">
       <h2 class="identificador">NOSSO BLOG</h2>
       <h1>
@@ -26,34 +26,27 @@ export default {
   },
   data() {
     return {
-      posts: [
-        {
-          title: "Como funciona tal coisa?",
-          obs: "Conserve os olhos fixos num ideal sublime, e lute sempre pelo que deseja",
-        },
-        {
-          title: "Como funciona outra coisa?",
-          obs: "Oportunidades não acontecem, você as cria.",
-        },
-        {
-          title: "Como coisa?",
-          obs: "Sempre que você se encontra do lado da maioria, é hora de parar e refletir.",
-        },
-        {
-          title: "Como funciona?",
-          obs: "Se você quer alcançar a grandeza, pare de pedir permissão.",
-        },
-      ],
+      posts: [],
+      tentativas: 0,
     };
   },
   methods: {
     getBlog() {
-      api.get("card").then((resp) => {
-        console.log(resp);
-      });
+      api
+        .get("card")
+        .then((resp) => {
+          this.posts = resp.data;
+        })
+        .catch(() => {
+          this.tentativas++;
+          if (this.tentativas < 3) {
+            this.getBlog();
+          }
+        })
     },
   },
   mounted() {
+    this.tentativas = 0;
     this.getBlog();
   },
 };

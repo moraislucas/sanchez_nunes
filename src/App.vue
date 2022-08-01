@@ -28,6 +28,9 @@ export default {
 body {
   background: #1a2025;
 }
+html {
+  scroll-behavior: smooth;
+}
 ul {
   list-style: none;
 }
@@ -107,7 +110,7 @@ img {
   flex: 1;
 }
 .btn {
-  display: block;
+  display: inline-block;
   font-family: "Montserrat", sans-serif;
   background: #3d5bf6;
   color: #fff;
