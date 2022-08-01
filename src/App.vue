@@ -25,6 +25,15 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ececec;
+  border-radius: 5px;
+  height: 50px;
+}
 body {
   background: #1a2025;
 }
