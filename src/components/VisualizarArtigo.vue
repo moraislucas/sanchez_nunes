@@ -136,11 +136,21 @@ export default {
   color: #ff0022;
 }
 @media screen and (max-width: 768px) {
+  .visualizar {
+    padding: 15px;
+  }
   .visualizar h2 {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 15px;
+  }
+  .visualizar p,
+  .visualizar .artigo {
+    font-size: 14px;
+  }
+  .visualizar h2 {
+    font-size: 16px;
   }
 }
 </style>

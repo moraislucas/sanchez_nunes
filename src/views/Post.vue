@@ -1,12 +1,19 @@
 <template>
   <section class="container post">
-    <div v-if="visualizar && !loading">
-      <VisualizarArtigo :visualizar="visualizar" :read="true" />
-    </div>
+    <div class="content">
+      <router-link to="/" data-anima="left" class="logo">
+        <img src="@/assets/logo.svg" alt="Logotipo Sanchez e Nunes Advocacia" />
+      </router-link>
+      <div>
+        <div v-if="visualizar && !loading">
+          <VisualizarArtigo :visualizar="visualizar" :read="true" />
+        </div>
 
-    <div class="carregando" v-if="loading">Carregando, aguarde...</div>
-    <div class="carregando error" v-if="show_error">
-      Erro ao buscar os dados desse artigo ou inexistente
+        <div class="carregando" v-if="loading">Carregando, aguarde...</div>
+        <div class="carregando error" v-if="show_error">
+          Erro ao buscar os dados desse artigo ou inexistente
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -25,6 +32,7 @@ export default {
       show_error: false,
     };
   },
+
   methods: {
     getPost(id) {
       this.loading = true;
@@ -49,7 +57,8 @@ export default {
 
 <style scoped>
 .post {
-  padding: 40px 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .carregando {
   color: #fff;
@@ -63,5 +72,22 @@ export default {
 .error {
   color: rgb(255, 0, 34);
   background: rgba(255, 0, 34, 0.1);
+}
+.content {
+  margin: 60px auto;
+}
+.logo {
+  margin-bottom: 40px;
+  display: inline-block;
+  max-width: 400px;
+}
+@media screen and (max-width: 768px) {
+  .post {
+    display: block;
+    padding: 0 10px;
+  }
+  .logo {
+    max-width: auto;
+  }
 }
 </style>
