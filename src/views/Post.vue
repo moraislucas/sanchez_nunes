@@ -82,7 +82,7 @@ export default {
   background: rgba(255, 0, 34, 0.1);
 }
 .content {
-  margin: 60px auto;
+  margin: 60px 0;
 }
 .logo {
   margin-bottom: 40px;
