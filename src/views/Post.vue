@@ -30,6 +30,7 @@ export default {
       visualizar: null,
       loading: false,
       show_error: false,
+      tentativas: 0,
     };
   },
 
@@ -42,7 +43,12 @@ export default {
           this.visualizar = resp.data;
         })
         .catch(() => {
-          this.show_error = true;
+          this.tentativas++;
+          if (this.tentativas < 3) {
+            this.getBlog();
+          } else {
+            this.show_error = true;
+          }
         })
         .finally(() => {
           this.loading = false;
@@ -50,6 +56,8 @@ export default {
     },
   },
   mounted() {
+    this.tentativas = 0;
+
     this.getPost(this.$route.params.id);
   },
 };
