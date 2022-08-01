@@ -35,7 +35,11 @@ export default {
       api
         .get("card")
         .then((resp) => {
-          this.posts = resp.data;
+          this.posts = resp.data.filter((item) => {
+            if (item.active) {
+              return item;
+            }
+          });
         })
         .catch(() => {
           this.tentativas++;

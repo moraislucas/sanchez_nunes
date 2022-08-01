@@ -76,11 +76,14 @@ export default {
       this.visualizar = data;
     },
     editarItem(data) {
+      console.log(data);
       this.editar = {};
       this.editar = data;
       this.show_list = false;
-      this.criar = true;
       this.visualizar = {};
+      setTimeout(() => {
+        this.criar = true;
+      });
     },
 
     voltar() {

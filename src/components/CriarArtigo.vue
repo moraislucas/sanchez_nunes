@@ -32,7 +32,7 @@
 
       <button class="btn" :disabled="loading">Salvar</button>
     </form>
-    <form action="" @submit.prevent="salvarEdicao" v-if="editar.Id">
+    <form action="" @submit.prevent="salvarEdicao" v-if="editar.id">
       <label for="titulo">Título do artigo</label>
       <input
         type="text"
@@ -114,7 +114,7 @@ export default {
       this.editar.about = this.html;
 
       api
-        .put(`card/${this.editar.Id}`, { ...this.editar, id: this.editar.Id })
+        .put(`card/${this.editar.id}`, { ...this.editar, id: this.editar.id })
         .then(() => {
           this.$emit("success");
         })
@@ -150,7 +150,7 @@ export default {
     },
   },
   mounted() {
-    this.html = this.editar.About;
+    this.html = this.editar.about;
   },
 };
 </script>
