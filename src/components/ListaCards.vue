@@ -77,6 +77,7 @@ export default {
         Title: data.title,
         About: data.about,
         Active: data.active,
+        Summary: data.summary
       };
       this.show_list = false;
       this.criar = true;

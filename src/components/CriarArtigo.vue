@@ -14,23 +14,47 @@
         v-model="dados.Title"
         :disabled="loading"
       />
-      <label for="conteudo">Conteúdo</label>
 
+      <label for="resumo">Resumo do artigo</label>
+      <input
+        type="text"
+        id="resumo"
+        placeholder="Esse info. será mostrada no seu site para o cliente"
+        required
+        autocomplete="off"
+        v-model="dados.Summary"
+        :disabled="loading"
+        maxlength="100"
+      />
+
+      <label for="conteudo">Conteúdo</label>
       <vue-editor v-model="html" :html="html"></vue-editor>
 
       <button class="btn" :disabled="loading">Salvar</button>
     </form>
     <form action="" @submit.prevent="salvarEdicao" v-if="editar.Id">
-      <label for="titulo">Titulo do artigo</label>
+      <label for="titulo">Título do artigo</label>
       <input
         type="text"
         id="titulo"
-        placeholder="Titulo do artigo"
+        placeholder="Título do artigo"
         required
         autocomplete="off"
         v-model="editar.Title"
         :disabled="loading"
       />
+      <label for="resumo">Resumo do artigo</label>
+      <input
+        type="text"
+        id="resumo"
+        placeholder="Esse info. será mostrada no seu site para o cliente"
+        required
+        autocomplete="off"
+        v-model="editar.Summary"
+        :disabled="loading"
+        maxlength="100"
+      />
+
       <label for="conteudo">Conteúdo</label>
 
       <vue-editor v-model="html" :html="html"></vue-editor>
@@ -78,6 +102,7 @@ export default {
         Title: "",
         About: "",
         Active: true,
+        Summary: "",
       },
     };
   },

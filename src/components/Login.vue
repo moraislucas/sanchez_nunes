@@ -50,6 +50,7 @@ export default {
   },
   methods: {
     logar() {
+      this.loading = true;
       this.show_error = false;
       this.text_btn = "Carregando...";
       api

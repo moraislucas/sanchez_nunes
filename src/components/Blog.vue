@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { api } from "@/services.js";
+
 import PostItem from "@/components/PostItem.vue";
 export default {
   name: "Blog",
@@ -43,6 +45,16 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    getBlog() {
+      api.get("card").then((resp) => {
+        console.log(resp);
+      });
+    },
+  },
+  mounted() {
+    this.getBlog();
   },
 };
 </script>
