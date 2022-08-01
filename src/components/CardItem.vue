@@ -30,10 +30,10 @@ export default {
     changeStatus() {
       const status = this.card.active ? false : true;
       const data = {
-        About: this.card.about,
-        Id: this.card.id,
-        Title: this.card.title,
-        Active: status,
+        about: this.card.about,
+        id: this.card.id,
+        title: this.card.title,
+        active: status,
       };
 
       api

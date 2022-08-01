@@ -5,7 +5,9 @@
       <div class="left-view">
         <div class="acoes">
           <a href="#" @click.prevent="editar">Editar</a>
-          <a href="#" @click.prevent="changeStatus">{{ visualizar.active ? "Desativar" : "Ativar" }}</a>
+          <a href="#" @click.prevent="changeStatus">{{
+            visualizar.active ? "Desativar" : "Ativar"
+          }}</a>
           <a href="#" class="excluir" @click.prevent="excluir">Excluir</a>
         </div>
         <span class="ativo" v-if="visualizar.active">Ativado</span>
@@ -32,10 +34,10 @@ export default {
     changeStatus() {
       const status = this.visualizar.active ? false : true;
       const data = {
-        About: this.visualizar.about,
-        Id: this.visualizar.id,
-        Title: this.visualizar.title,
-        Active: status,
+        about: this.visualizar.about,
+        id: this.visualizar.id,
+        title: this.visualizar.title,
+        active: status,
       };
 
       api

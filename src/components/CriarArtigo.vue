@@ -3,7 +3,7 @@
     <p v-if="show_error" class="error" data-anima="top">
       Ocorreu um erro ao tentar salvar os dados. Tente novamente
     </p>
-    <form action="" @submit.prevent="salvar" v-if="!editar.Id">
+    <form action="" @submit.prevent="salvar" v-if="!editar.id">
       <label for="titulo">Titulo do artigo</label>
       <input
         type="text"
@@ -11,7 +11,7 @@
         placeholder="Titulo do artigo"
         required
         autocomplete="off"
-        v-model="dados.Title"
+        v-model="dados.title"
         :disabled="loading"
       />
 
@@ -22,7 +22,7 @@
         placeholder="Esse info. será mostrada no seu site para o cliente"
         required
         autocomplete="off"
-        v-model="dados.Summary"
+        v-model="dados.summary"
         :disabled="loading"
         maxlength="100"
       />
@@ -40,7 +40,7 @@
         placeholder="Título do artigo"
         required
         autocomplete="off"
-        v-model="editar.Title"
+        v-model="editar.title"
         :disabled="loading"
       />
       <label for="resumo">Resumo do artigo</label>
@@ -50,7 +50,7 @@
         placeholder="Esse info. será mostrada no seu site para o cliente"
         required
         autocomplete="off"
-        v-model="editar.Summary"
+        v-model="editar.summary"
         :disabled="loading"
         maxlength="100"
       />
@@ -64,11 +64,11 @@
           type="checkbox"
           id="active"
           name="active"
-          v-model="editar.Active"
+          v-model="editar.active"
           :disabled="loading"
         />
         <label for="active" class="label-checkobox">
-          {{ editar.Active ? "Artigo ativado" : "Artigo desativado" }}</label
+          {{ editar.active ? "Artigo ativado" : "Artigo desativado" }}</label
         ><br />
       </div>
 
@@ -99,10 +99,10 @@ export default {
       loading: false,
       html: "",
       dados: {
-        Title: "",
-        About: "",
-        Active: true,
-        Summary: "",
+        title: "",
+        about: "",
+        active: true,
+        summary: "",
       },
     };
   },
@@ -111,10 +111,10 @@ export default {
       this.loading = true;
       this.show_error = false;
       this.text_btn = "Carregando...";
-      this.editar.About = this.html;
+      this.editar.about = this.html;
 
       api
-        .put(`card/${this.editar.Id}`, { ...this.editar, Id: this.editar.Id })
+        .put(`card/${this.editar.Id}`, { ...this.editar, id: this.editar.Id })
         .then(() => {
           this.$emit("success");
         })
@@ -131,7 +131,7 @@ export default {
       this.loading = true;
       this.show_error = false;
       this.text_btn = "Carregando...";
-      this.dados.About = this.html;
+      this.dados.about = this.html;
 
       api
         .post("card", this.dados)

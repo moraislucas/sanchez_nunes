@@ -72,13 +72,7 @@ export default {
     },
     editarItem(data) {
       this.editar = {};
-      this.editar = {
-        Id: data.id,
-        Title: data.title,
-        About: data.about,
-        Active: data.active,
-        Summary: data.summary
-      };
+      this.editar = data;
       this.show_list = false;
       this.criar = true;
       this.visualizar = {};

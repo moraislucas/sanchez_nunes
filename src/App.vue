@@ -198,4 +198,9 @@ select:focus {
 .v-leave-active {
   transition: all 0.3s;
 }
+
+/* editor html */
+.quillWrapper {
+  color: #fff !important;
+}
 </style>

@@ -15,7 +15,7 @@
         placeholder="Nome do Usuário"
         required
         autocomplete="off"
-        v-model="dados.UserName"
+        v-model="dados.userName"
         :disabled="loading"
       />
       <label for="senha">Senha de acesso</label>
@@ -24,7 +24,7 @@
         id="senha"
         placeholder="Digite sua senha"
         required
-        v-model="dados.Password"
+        v-model="dados.password"
         :disabled="loading"
       />
 
@@ -43,8 +43,8 @@ export default {
       show_error: false,
       loading: false,
       dados: {
-        UserName: "",
-        Password: "",
+        userName: "",
+        password: "",
       },
     };
   },
