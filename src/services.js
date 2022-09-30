@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const url = 'http://paulofelipe-001-site1.htempurl.com/api/';
+// const url = 'http://paulofelipe-001-site1.htempurl.com/api/';
+const url = 'http://www.sanchezenunes.kinghost.net/api/';
 const axiosInstance = axios.create({
   baseURL: url,
 });
