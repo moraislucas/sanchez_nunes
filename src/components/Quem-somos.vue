@@ -18,15 +18,12 @@
           </p>
         </div>
         <div class="advs">
-          <span>Dr. André</span>
-          <span>Dr. Cicero</span>
+          <span>Dr. André | OAB/SP 417.553</span>
+          <span>Dr. Domingos Garcia Neto | OAB/SP 235.519</span>
         </div>
       </div>
       <div class="img-about">
-        <img
-          src="@/assets/img/imagem-2.png"
-          alt="Sanchez & Nunes Advogados Associados"
-        />
+        <img src="@/assets/img/imagem-2.png" alt="André Sanchez Advocacia" />
       </div>
     </section>
   </div>

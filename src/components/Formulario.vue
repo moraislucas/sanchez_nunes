@@ -2,7 +2,7 @@
   <div>
     <p v-if="show_error" class="notify error" data-anima="top">
       Ocorreu um erro ao enviar os dados. <br />Entre em contato:
-      sanchezenunes.adv@hotmail.com
+      andresanchez@adv.oabsp.org.br
     </p>
     <p v-if="show_success" class="notify success" data-anima="top">
       Dados enviados corretamente. <br />Em breve entraremos em contato com você

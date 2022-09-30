@@ -2,7 +2,7 @@
   <section class="container post">
     <div class="content">
       <router-link to="/" data-anima="left" class="logo">
-        <img src="@/assets/logo.svg" alt="Logotipo Sanchez e Nunes Advocacia" />
+        <img src="@/assets/logo.svg" alt="Logotipo André Sanchez  Advocacia" />
       </router-link>
       <div>
         <div v-if="visualizar && !loading">

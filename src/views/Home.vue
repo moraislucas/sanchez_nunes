@@ -38,7 +38,7 @@ export default {
   },
 
   created() {
-    document.title = "Home | Sanchez e Nunes Advocacia";
+    document.title = "Home | André Sanchez  Advocacia";
     window.localStorage.token = "";
   },
 };

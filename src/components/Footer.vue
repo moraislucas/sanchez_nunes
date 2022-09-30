@@ -3,7 +3,7 @@
     <div class="top-footer">
       <img
         src="@/assets/logo-footer.svg"
-        alt="Logotipo Sanchez e Nunes"
+        alt="Logotipo André Sanchez Advocacia"
         @click="topo"
         class="logo"
       />
@@ -18,16 +18,16 @@
           </a> -->
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
+            href="https://api.whatsapp.com/send?phone=5511982877508&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
             ><img
               src="@/assets/icons/whatsapp.svg"
-              alt="whatsapp Sanchez & Nunes Advogados Associados"
+              alt="whatsapp Andre Sanchez Advogado"
           /></a>
-          <a href="https://www.facebook.com/sanchez.nunes.77" target="_blank">
+          <!-- <a href="https://www.facebook.com/sanchez.nunes.77" target="_blank">
             <img src="@/assets/icons/facebook.svg" alt="facebook" />
-          </a>
+          </a> -->
           <a
-            href="https://www.instagram.com/sanchezenunesadvocacia/"
+            href="https://www.instagram.com/andresanchezadvocacia/"
             target="_blank"
           >
             <img src="@/assets/icons/instagram.svg" alt="instagram" />
@@ -40,14 +40,13 @@
     </div>
     <div class="bottom-footer">
       <p>
-        SANCHEZ E NUNEZ - ADVOGADOS ASSOCIADOS
+        ANDRÉ SANCHEZ ADVOCACIA
         <br />
-        Av. Brasil 1458, 1º Andar, Sala 04 - Rochdale - CEP 06220-050 -
-        Osasco/SP
+        Av Hilario Pereira de Souza, 406 - Torre 2, CJ 2608 - Centro, Osasco/SP
       </p>
-      <a href="mailto:sanchezenunes.adv@hotmail.com">
+      <a href="mailto:andresanchez@adv.oabsp.org.br">
         <span>Atendimento:</span>
-        <p>sanchezenunes.adv@hotmail.com</p>
+        <p>andresanchez@adv.oabsp.org.br</p>
       </a>
     </div>
   </footer>

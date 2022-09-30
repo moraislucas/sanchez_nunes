@@ -6,7 +6,7 @@
         <h1>Entre em contato</h1>
         <div class="contatos">
           <a
-            href="mailto:sanchezenunes.adv@hotmail.com"
+            href="mailto:andresanchez@adv.oabsp.org.br"
             class="item-contato"
             target="_blank"
           >
@@ -15,11 +15,11 @@
             </div>
             <div>
               <span>Dúvidas ? Fale conosco</span>
-              <p>sanchezenunes.adv@hotmail.com</p>
+              <p>andresanchez@adv.oabsp.org.br</p>
             </div>
           </a>
           <a
-            href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
+            href="https://api.whatsapp.com/send?phone=5511982877508&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
             class="item-contato"
             target="_blank"
           >
@@ -28,12 +28,12 @@
             </div>
             <div>
               <span>WhatsApp</span>
-              <p>(11) 2576-8639</p>
+              <p>(11) 9.8287-7508</p>
             </div>
           </a>
 
           <a
-            href="https://goo.gl/maps/bVkpXvkPQqhuC8eX7"
+            href="https://www.google.com/maps/dir//Av.+Hil%C3%A1rio+Pereira+de+Souza,+406+-+Centro,+Osasco+-+SP,+06010-170/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94ceff14236e2f9d:0x92ae39598fa5584d?sa=X&ved=2ahUKEwia-KfCsr36AhVWq5UCHdmuDpsQwwV6BAgDEAM"
             class="item-contato"
             target="_blank"
           >
@@ -44,8 +44,7 @@
               />
             </div>
             <p>
-              Av. Brasil 1458, 1º Andar, Sala 04 - Rochdale - CEP 06220-050 -
-              Osasco/SP
+              Av Hilario Pereira de Souza, 406 - Torre 2, CJ 2608 - Centro, Osasco/SP
             </p>
           </a>
         </div>

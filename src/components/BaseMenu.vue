@@ -1,15 +1,15 @@
 <template>
-  <header >
+  <header>
     <div class="container menu">
       <router-link to="/" data-anima="left">
         <img
           src="@/assets/logo.svg"
-          alt="Logotipo Sanchez e Nunes Advocacia"
+          alt="Logotipo André Sanchez  Advocacia"
           v-if="!isMobile"
         />
         <img
           src="@/assets/logo-mobile.svg"
-          alt="Logotipo Sanchez e Nunes Advocacia"
+          alt="Logotipo André Sanchez  Advocacia"
           v-if="isMobile"
         />
       </router-link>
