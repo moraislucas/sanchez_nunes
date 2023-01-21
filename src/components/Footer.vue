@@ -2,7 +2,7 @@
   <footer class="container footer">
     <div class="top-footer">
       <img
-        src="@/assets/logo-footer.svg"
+        src="@/assets/logo.svg"
         alt="Logotipo André Sanchez Advocacia"
         @click="topo"
         class="logo"

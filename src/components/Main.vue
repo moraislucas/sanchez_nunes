@@ -10,7 +10,7 @@
       <div class="social-media" data-anima="left">
         <a
           target="_blank"
-          href="https://api.whatsapp.com/send?phone=551125768639&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
+          href="https://api.whatsapp.com/send?phone=5511982877508&text=Ol%C3%A1%2C%20gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20(vim%20pelo%20site)"
           ><img
             src="@/assets/icons/whatsapp.svg"
             alt="whatsapp Andre Sanchez Advogado"
