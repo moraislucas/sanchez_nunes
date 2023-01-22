@@ -1,8 +1,6 @@
 <template>
   <div>
-    <router-link to="/"
-      ><img src="@/assets/logo-footer.svg" alt="Logo"
-    /></router-link>
+    <router-link to="/"><img src="@/assets/logo.svg" alt="Logo" /></router-link>
 
     <p v-if="show_error" class="error" data-anima="top">
       Os dados de acesso estão incorretos. Tente novamente
